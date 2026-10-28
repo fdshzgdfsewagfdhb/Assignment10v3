@@ -7,6 +7,16 @@ import { initializeServerApp, initializeApp } from "firebase/app";
 
 import { getAuth } from "firebase/auth";
 
+
+const firebaseConfig = { 
+apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY, 
+authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN, 
+projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID, 
+storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET, 
+messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID, 
+appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID, 
+};
+
 /*  
   Export an async function that returns the authenticated app instance for a given user.  
 
@@ -22,7 +32,7 @@ export async function getAuthenticatedAppForUser() {
 
   // Step 2 – initialize the server‑side app with the token
   const firebaseServerApp = initializeServerApp(
-    initializeApp(),
+    initializeApp(firebaseConfig),
     {
       authIdToken,
     }
