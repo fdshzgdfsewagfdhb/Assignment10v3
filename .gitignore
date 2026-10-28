@@ -1,3 +1,5 @@
+.env
+local.env
 lib/firebase/config.js
 .next/
 .firebase/
