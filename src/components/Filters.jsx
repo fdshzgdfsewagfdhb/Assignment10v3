@@ -54,19 +54,10 @@ export default function Filters({ filters, setFilters }) {
             label="Category"
             options={[
               "",
-              "Italian",
-              "Chinese",
-              "Japanese",
-              "Mexican",
-              "Indian",
-              "Mediterranean",
-              "Caribbean",
-              "Cajun",
-              "German",
-              "Russian",
-              "Cuban",
-              "Organic",
-              "Tapas",
+              "Faith",
+              "People",
+              "Powers",
+           
             ]}
             value={filters.category}
             onChange={(event) => handleSelectionChange(event, "category")}
@@ -78,17 +69,9 @@ export default function Filters({ filters, setFilters }) {
             label="City"
             options={[
               "",
-              "New York",
-              "Los Angeles",
-              "London",
-              "Paris",
-              "Tokyo",
-              "Mumbai",
-              "Dubai",
-              "Amsterdam",
-              "Seoul",
-              "Singapore",
-              "Istanbul",
+              "In the city",
+              "Around the city",
+
             ]}
             value={filters.city}
             onChange={(event) => handleSelectionChange(event, "city")}

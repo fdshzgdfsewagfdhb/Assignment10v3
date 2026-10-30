@@ -56,6 +56,7 @@ const RestaurantDetails = ({
             {restaurant.category} | {restaurant.city}
           </p>
           <p>{"$".repeat(restaurant.price)}</p>
+          <h3>{restaurant.description}</h3>
           {children}
         </div>
       </div>
